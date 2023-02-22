@@ -17,7 +17,7 @@ const svg = d3.select('#vis1')
 		.attr("transform", `translate(${margin.left},${margin.top})`);
 
 d3.csv('data.csv').then(function(data){
-	const.x = d3.scaleBand()
+	const x = d3.scaleBand()
 		.range([0, width])
 		.domain(data.map(d=>d.Category))
 		.padding(0.2);
